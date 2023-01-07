@@ -1,13 +1,17 @@
+document.getElementById('rock').onclick = playerChoice;
+document.getElementById('paper').onclick = playerChoice;
+document.getElementById('scissors').onclick = playerChoice;
+
+function playerChoice() {
+    var user = this.id;
+    console.log("User: " + user);
+}
+
     function getComputerChoice() {
     let myArray = ['Rock', 'Paper', 'Scissors'];
     return (myArray[Math.floor(Math.random() * myArray.length)]);
 }
 
-
-function playerChoice() {
-    let playerChoice = prompt('Rock, Paper, or Scissors?');
-    return playerChoice.charAt(0).toUpperCase()+ playerChoice.slice(1).toLowerCase();
-}
 let playerSelection = playerChoice();
 let computerSelection = getComputerChoice();
 
@@ -58,29 +62,8 @@ function playRound(playerSelection, computerSelection) {
 
 console.log(playRound(playerSelection, computerSelection));
 
-function game() {
-for (let i = 0; i <4; i++) {
-    
-playerChoice = prompt('Rock, Paper, or Scissors?');
-playerSelection = playerChoice.charAt(0).toUpperCase()+ playerChoice.slice(1).toLowerCase();
 
-myArray = ['Rock', 'Paper', 'Scissors'];
-computerSelection = myArray[Math.floor(Math.random() * myArray.length)];
-console.log("Player selection:", playerSelection);
-console.log("Computer selection:", computerSelection);
 
-console.log(playRound(playerSelection, computerSelection));
-}
-     if (playerScore > computerScore) {
-        return 'You won this game. Congratulations!';
-    }
-    else if (playerScore == computerScore) {
-        return "It's a tie!";
-    } else {
-        return 'You lost this game. Better luck next time!';
-    }
-}
-console.log(game());
 
 console.log("Your final score is " +playerScore +" wins " +computerScore +" loses and " +tieScore +" draws.");
 score=playerScore+computerScore+tieScore;
