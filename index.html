@@ -2,13 +2,66 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <title>Rock-Paper-Scissors</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="javascript.js" defer>
-  </script>
-  <button id='rock'>Rock</button>
-  <button id='paper'>Paper</button>
-  <button id='scissors'>Scissors</button>
+<audio id="buttonsound" src="../sound/button-click.mp3" ></audio>
+<div class="container" id="introcontainer">
+  <h1 id="question"></h1>
+  <button id="startbtn">START</button>
+</div>
+<div class="container" id="maincontainer">
+  <div class="gameHeading">Rock, Paper or Scissors?</div>
+  <div class="gameDetails">
+    <div class="playerTotalScore">Score: 0</div>
+    <div class="playerDetails">
+      <div class="playerHeadingLogo">
+        <img class="playerLogo" src="../img/player-logo.png">
+        <div class="playerHeading">PLAYER</div>
+      </div>
+      <div class="playSelections">
+         <div class="playSelection" id="rockDiv">
+         <p class="selectionText" id="playerRock">ROCK</p>
+         <img class="imgOption" id="rockimg" src="../img/rock-player.jpg">
+         </div>
+         <div class="playSelection" id="paperDiv">
+          <p class="selectionText" id="playerPaper">PAPER</p>
+          <img class="imgOption" id="paperimg" src="../img/paper-player.jpg">
+          </div>
+          <div class="playSelection" id="scissorsDiv">
+          <p class="selectionText" id="playerScissors">SCISSORS</p>
+          <img class="imgOption" id="scissorsimg" src="../img/scissors-player.jpg">
+          </div>
+      </div>  
+    </div>
+    <div class="playerDetails">
+      <div class="playerHeadingLogo">
+        <img class="playerLogo" src="../img/computer-logo.png">
+        <div class="playerHeading">COMPUTER</div>
+      </div>
+      <div class="playSelections">
+        <div class="playSelection" id="computerRockDiv">
+        <p class="selectionText">ROCK</p>
+        <img class="imgOption" id="computerRockImg" src="../img/rock-computer.jpg">
+        </div>
+        <div class="playSelection" id="computerPaperDiv">
+         <p class="selectionText" id="computerPaper">PAPER</p>
+         <img class="imgOption" id="computerPaperImg" src="../img/paper-computer.jpg">
+         </div>
+         <div class="playSelection" id="computerScissorsDiv">
+         <p class="selectionText" id="computerScissors">SCISSORS</p>
+         <img class="imgOption" id="computerScissorsImg" src="../img/scissors-computer.jpg">
+         </div>
+     </div>  
+    </div>
+    <div class="computerTotalScore">Score: 0</div>
+    </div>
+    <div class="comments">Show me what you got &#128513</div>
+</div>
+<div id="winnerDiv">
+  
+</div>
+<script src="javascript.js"></script>
 </body>
 </html>
