@@ -1,17 +1,13 @@
-document.getElementById('rock').onclick = playerChoice;
-document.getElementById('paper').onclick = playerChoice;
-document.getElementById('scissors').onclick = playerChoice;
-
-function playerChoice() {
-    var user = this.id;
-    console.log("User: " + user);
-}
-
-    function getComputerChoice() {
+function getComputerChoice() {
     let myArray = ['Rock', 'Paper', 'Scissors'];
     return (myArray[Math.floor(Math.random() * myArray.length)]);
 }
 
+
+function playerChoice() {
+    let playerChoice = prompt('Rock, Paper, or Scissors?');
+    return playerChoice.charAt(0).toUpperCase()+ playerChoice.slice(1).toLowerCase();
+}
 let playerSelection = playerChoice();
 let computerSelection = getComputerChoice();
 
@@ -61,10 +57,3 @@ function playRound(playerSelection, computerSelection) {
 }
 
 console.log(playRound(playerSelection, computerSelection));
-
-
-
-
-console.log("Your final score is " +playerScore +" wins " +computerScore +" loses and " +tieScore +" draws.");
-score=playerScore+computerScore+tieScore;
-console.log("You played this game " +score +" times.\n -------\nGame over.");
